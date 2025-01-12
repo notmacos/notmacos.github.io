@@ -242,6 +242,8 @@ h1::after {
 @media (max-width: 1200px) {
     .days-container {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
     
     .app-container {
@@ -249,36 +251,104 @@ h1::after {
     }
     
     h1 {
-        font-size: 40px;
+        font-size: 36px;
+    }
+
+    .day-item {
+        min-height: 180px;
+        padding: 1.25rem;
     }
 }
 
 @media (max-width: 768px) {
     .days-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 0.875rem;
+        padding: 0.875rem;
     }
     
     .app-container {
-        padding: 1.5rem 1rem;
+        padding: 1.25rem 1rem;
     }
     
     h1 {
-        font-size: 34px;
+        font-size: 32px;
+    }
+    
+    .week-title {
+        font-size: 16px;
+        margin-bottom: 1.5rem;
     }
     
     .day-item {
-        padding: 1.25rem;
+        min-height: 160px;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .day-item h3 {
+        font-size: 16px;
+    }
+
+    .date-small {
+        font-size: 13px;
+        margin-bottom: 1rem;
+    }
+
+    .event-card {
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .event-time {
+        font-size: 16px;
+        margin-bottom: 0.25rem;
+    }
+
+    .event-duration {
+        font-size: 13px;
+    }
+
+    .no-events-text {
+        font-size: 13px;
+        margin-top: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .days-container {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 0.75rem;
     }
     
     h1 {
         font-size: 28px;
+    }
+
+    .app-container {
+        padding: 1rem 0.75rem;
+    }
+
+    .day-item {
+        min-height: auto;
+        padding: 0.875rem;
+        border-radius: 16px;
+    }
+
+    header {
+        margin-bottom: 2rem;
+    }
+
+    .week-title {
+        font-size: 15px;
+        margin-bottom: 1.25rem;
+    }
+
+    .event-card {
+        padding: 0.875rem;
+        border-radius: 10px;
     }
 }
 
