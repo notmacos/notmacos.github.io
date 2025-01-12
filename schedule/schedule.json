@@ -1,38 +1,31 @@
 {
-    "Sunday, January 12, 2025": [
-        {
-            "time": "10:30 AM - 7:30 PM",
-            "activity": "Work Shift",
-            "duration": "9 hours",
-            "start": "10:30 AM",
-            "end": "7:30 PM"
-        }
-    ],
-    "Monday, January 13, 2025": [
-        {
-            "time": "9:00 AM - 6:00 PM",
-            "activity": "Work Shift",
-            "duration": "9 hours",
-            "start": "9:00 AM",
-            "end": "6:00 PM"
-        }
-    ],
-    "Tuesday, January 14, 2025": [
-        {
-            "time": "11:30 AM - 8:30 PM",
-            "activity": "Work Shift",
-            "duration": "9 hours",
-            "start": "11:30 AM",
-            "end": "8:30 PM"
-        }
-    ],
-    "Saturday, January 18, 2025": [
-        {
-            "time": "7:00 AM - 4:00 PM",
-            "activity": "Work Shift",
-            "duration": "9 hours",
-            "start": "7:00 AM",
-            "end": "4:00 PM"
-        }
-    ]
+    "Week of January 12-18, 2025": {
+        "Sunday, January 12": [
+            {
+                "time": "10:30 AM - 7:30 PM",
+                "duration": "9 hours"
+            }
+        ],
+        "Monday, January 13": [
+            {
+                "time": "9:00 AM - 6:00 PM",
+                "duration": "9 hours"
+            }
+        ],
+        "Tuesday, January 14": [
+            {
+                "time": "11:30 AM - 8:30 PM",
+                "duration": "9 hours"
+            }
+        ],
+        "Wednesday, January 15": [],
+        "Thursday, January 16": [],
+        "Friday, January 17": [],
+        "Saturday, January 18": [
+            {
+                "time": "7:00 AM - 4:00 PM",
+                "duration": "9 hours"
+            }
+        ]
+    }
 } 
