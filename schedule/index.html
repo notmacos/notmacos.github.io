@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="animate__animated animate__fadeIn">
+            <h1>Schedule<span class="accent">Flow</span></h1>
+            <p class="tagline">Your Schedule at a Glance</p>
+        </header>
+
+        <div class="schedule-display animate__animated animate__fadeIn" id="scheduleDisplay">
+            <!-- Schedule will be rendered here -->
+        </div>
+    </div>
+    <script>
+        // Fetch and display the schedule when the page loads
+        fetch('schedule.json')
+            .then(response => response.json())
+            .then(schedule => {
+                const scheduleDisplay = document.getElementById('scheduleDisplay');
+                
+                Object.entries(schedule).forEach(([day, events]) => {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'schedule-item animate__animated animate__fadeInUp';
+                    
+                    dayElement.innerHTML = `
+                        <h3>${day}</h3>
+                        <ul>
+                            ${events.map(event => `
+                                <li>
+                                    <strong>${event.time}</strong>
+                                    <p>${event.activity}</p>
+                                    <small>Duration: ${event.duration}</small>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                    
+                    scheduleDisplay.appendChild(dayElement);
+                });
+            })
+            .catch(error => console.error('Error loading schedule:', error));
+    </script>
+</body>
+</html> 
